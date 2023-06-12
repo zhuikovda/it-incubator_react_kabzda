@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {ControledRating} from "./ControledRating";
+import {ControledRating, RatingPropsType} from "./ControledRating";
 
 
 
