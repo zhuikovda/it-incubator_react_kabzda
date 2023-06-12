@@ -1,14 +1,14 @@
 import React, {useState} from "react";
 
 type OnOffPorpsType = {
-    // on: boolean;
+    on: boolean;
 };
 
 
 
 export const OnOff = (props: OnOffPorpsType) => {
     // let on = false;
-    const [on, setOn] = useState(false);
+    const [on, setOn] = useState(props.on);
     const onStyle = {
         width: "30px",
         height: "20px",

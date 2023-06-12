@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./App.css";
 import { OnOff } from "./components/OnOff/OnOff";
 import { Rating } from "./components/Raiting/Rating";
 import UncontroledAccordion from "./components/UncontroledAccordion/UncontroledAccordion";
-import { ControledRating } from "./components/UncontroledRaiting/UncontroledRating";
+import { ControledRating } from "./components/UncontroledRaiting/ControledRating";
 import Accordion from "./components/Accordion/Accordion";
 import { OnOffControlled } from "./components/OnOff/OnOffControlled";
 
@@ -18,7 +18,8 @@ function App() {
       <PageTitle title={"This is App component"} />
       <PageTitle title={"Hello, dima"} />
       Article 1{/* <Rating val={1} /> */}
-      <UncontroledAccordion titleValue={"Accordion"} />
+      <UncontroledAccordion titleValue={"Accordion"} ollapsed={accCollapsed}
+        callBack={setAccCollapsed}/>
       <UncontroledAccordion titleValue={"Menu"} />
       <Accordion
         titleValue={"__d_zh__"}
@@ -26,11 +27,9 @@ function App() {
         callBack={setAccCollapsed}
       />
       Article 2{/* <ControledRating /> */}
-      <OnOff />
-      <OnOff />
-      <OnOff />
-      {/* <OnOff on={false}/>
-      <OnOff on={true}/> */}
+      <OnOff on={false}/>
+      <OnOff on={true}/>
+      <OnOff on={false}/>
       <ControledRating val={val} onClick={setVal} />
       <OnOffControlled flag={on} callBack={setOn} />
     </div>
